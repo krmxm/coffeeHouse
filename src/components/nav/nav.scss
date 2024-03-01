@@ -4,7 +4,6 @@
     max-width: 1200px;
     padding: 0 25px;
     margin: 0 auto;
-    margin-bottom: 63px;
     @media (max-width: 768px){
         justify-content: space-between;
     }
@@ -48,23 +47,34 @@
         font-size: 1.2rem;
         font-weight: 400;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	    // line-height: 30px;
-        &:before {
-            position: absolute;
-            content: "";
-            background-color: #fff;
-            width: 0;
-            height: 2px;
-            left: 0;
-            bottom: -5px;
-            transition: all 0.4s ease-out;
-        }
-        &:hover:before {
-            width: 100%;
-        }
-        &_active {
+	    &_black, &_white {
             &:before {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 2px;
+                left: 0;
+                bottom: -5px;
+                transition: all 0.4s ease-out;
+            }
+            &:hover:before {
                 width: 100%;
+            }
+            &_active {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+        &_black {
+            color: #000;
+            &:before {
+                background-color: #000;
+            }
+        }
+        &_white {
+            &:before {
+                background-color: #fff;
             }
         }
         @media (max-width: 768px) {

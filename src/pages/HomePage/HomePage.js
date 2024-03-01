@@ -1,17 +1,19 @@
 // Components
 import Header from '../../layouts/header/header';
 import About from '../../layouts/about/about';
+import CoffeeList from '../../components/coffeeList/coffeeList';
+import Footer from '../../layouts/footer/footer';
 
 // Styles
 import './HomePage.scss';
 
 
-const HomePage = () => {
+const HomePage = ({data}) => {
+    //for all components
     const page = 'homePage';
     //for Header
     const titleHeader = "Everything You Love About Coffee";
     const clazz = "header header__home";
-    const homePage = true;
     //for section About
     const titleAbout = "About Us"
     const descr = () => {
@@ -30,10 +32,18 @@ const HomePage = () => {
             </p>
         )
     }
+
     return (
         <>
             <Header clazz={clazz} title={titleHeader} page={page} />
             <About title={titleAbout} descr={descr()} page={page} />
+            <section className='our-best'>
+                <div className="container">
+                    <h2 className='subtitle our-best__title'>Our best</h2>
+                    <CoffeeList data={data} />
+                </div>
+            </section>
+            <Footer color="black"/>
         </>
     );
 }

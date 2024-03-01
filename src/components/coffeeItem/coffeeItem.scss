@@ -1,0 +1,31 @@
+.coffee-item {
+    &__link {
+        padding: 20px;
+        border-radius: 8px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 10px;
+        color: #000;
+        filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, .25));
+        transition: filter 0.3s ease-in;
+        &:hover{
+        filter: drop-shadow(5px 20px 35px rgba(0, 0, 0, .35));
+
+        }
+        
+    }
+    &__img {
+        margin-bottom: auto;
+	    align-self: center;
+    }
+    &__country {
+        display: block;
+        text-align: right;
+    }
+    &__price {
+        font-weight: 700;
+    }
+}

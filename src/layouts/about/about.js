@@ -9,6 +9,8 @@ const About = ({title, img, descr, page}) => {
                 return 'about__padding-home';
             case 'coffeePage':
                 return 'about__padding-coffee';
+            case 'goodsPage':
+                return 'about__padding-coffee';
             default:
                 return '';
         }
@@ -20,6 +22,8 @@ const About = ({title, img, descr, page}) => {
                 return 'about__descr_home';
             case 'coffeePage':
                 return 'about__descr_coffee';
+            case 'goodsPage':
+                return 'about__descr_goods';
             default:
                 return '';
         }
@@ -31,7 +35,9 @@ const About = ({title, img, descr, page}) => {
                 <div className={`about__descr ${widthDescr(page)}`}>
                     <h2 className='subtitle about__subtitile'>{title}</h2>
                     <Divider />
-                    {descr}
+                    <div className="about__descr">
+                        {descr}
+                    </div>
                 </div>
             </>
         )

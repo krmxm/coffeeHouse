@@ -11,11 +11,16 @@
         padding: 50px 0 200px 0;
         text-align: center;
     }
-    &__coffee {
-        background: url("../../assets/backgrounds/coffepage.png") no-repeat;
+    &__coffee, &__goods {
         background-size: cover;
 	    background-position: center, center;
         color: #fff;
+    }
+    &__coffee {
+        background: url("../../assets/backgrounds/coffepage.png") no-repeat;
+    }
+    &__goods {
+        background: url("../../assets/backgrounds/goodspage.png") no-repeat;
     }
 
     // style for elements
@@ -24,6 +29,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 63px;
     }
     &__more {
         display: flex;

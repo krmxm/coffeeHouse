@@ -11,3 +11,17 @@
 .home-header .nav {
 	margin-bottom: 50px;
 }
+.our-best{
+	background: url("../../assets/backgrounds/our-best.png") no-repeat;
+	background-size: cover;
+	background-position: 65%, center;
+	color: #fff;
+	padding: 80px 0 110px 0;
+	&__title {
+		margin-bottom: 39px;
+		color: rgb(0, 0, 0);
+	}
+	& .coffee-list {
+		grid-template-rows: 1fr;
+	}
+}
